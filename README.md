@@ -1,41 +1,53 @@
 # Next.js Project Structure
 
-|-- actions # Server-side actions
-|-- app # Next.js App Router
-| |-- (auth) # (Group) Private routes
-| | |-- layout.tsx # Authenticated layout
-| | `-- profile # (Module) Profile page
-
-|-- components # Global components
-| `-- ui            # Atomic design components
-|       |-- Button.tsx
-|       `-- Tag.tsx
-|-- constants # Global constants
-|-- db # Database utilities
-| |-- prisma.ts # Prisma client
-| |-- data.ts # Seed data
-| `-- seed.ts      # Database seeding
-|-- hooks            # Custom React hooks
-|-- lib              # 3rd-party libraries
-|-- prisma           # Prisma configuration
-|   |-- schema.prisma # Database schema
-|   `-- seed.ts # Database seed script
-|-- public # Static files
-|-- styles # Global styles
-| `-- globals.css  # Global CSS
-|-- types            # Global types
-|-- utils            # Global utility functions
-|-- validators       # Zod schema validations
-|-- .env.example     # Environment variables example
-|-- .gitignore      # Git ignore rules
-|-- components.json  # Components configuration
-|-- eslint.config.mjs # ESLint configuration
-|-- middleware.ts    # Edge middleware
-|-- next-env.d.ts   # Next.js types
-|-- next.config.ts  # Next.js configuration
-|-- package.json    # Project dependencies
-|-- paths.ts        # Route definitions
-|-- postcss.config.mjs # PostCSS configuration
-|-- README.md       # Project documentation
-|-- tailwind.config.ts # TailwindCSS configuration
-`-- tsconfig.json # TypeScript configuration
+├── actions # Server-side actions for API routes
+├── app # Next.js App Router directory
+│ ├── (auth) # Group for private authentication routes
+│ │ ├── sign-in # Sign-in page component
+│ │ └── sign-up # Sign-up page component
+│ ├── (root) # Root group for the application
+│ │ ├── (home) # Home routes under root
+│ │ │ ├── page.tsx # Home page component
+│ │ │ └── layout.tsx # Layout for home routes
+│ ├── api # API route handlers
+│ ├── favicon.ico # Website favicon
+│ ├── layout.tsx # Root layout component
+│ ├── loading.tsx # Loading component for navigation
+│ └── not-found.tsx # 404 page component
+├── components # Global components used throughout the app
+│ ├── common # Commonly used components (Header, Footer, etc.)
+│ ├── page-name # Components specific to certain pages
+│ ├── shared # Reusable shared components
+│ └── ui # Atomic UI components like buttons and tags
+├── constants # Global constant values used in the app
+├── db # Database utilities and configurations
+│ ├── data.ts # Seed data for the database
+│ ├── prisma.ts # Prisma client setup
+│ └── seed.ts # Database seeding scripts
+├── hooks # Custom React hooks for the app
+├── lib # Third-party libraries and utility functions
+│ └── utils.ts # Utility functions for the app
+├── prisma # Prisma configuration and data model
+│ ├── schema.prisma # Prisma schema defining the data model
+├── public # Static assets like images, fonts, and icons
+│ ├── fonts # Font files used in the app
+│ ├── gif # GIF files used in the app
+│ ├── icons # Icon files used in the app
+│ └── images # Image files used in the app
+├── styles # Global styles for the app
+│ └── globals.css # Global CSS styles
+├── types # Global TypeScript type definitions
+├── utils # Additional utility functions
+├── validators # Zod schemas for data validation
+├── .env # Environment variables file
+├── .gitignore # Specifies files to ignore in Git
+├── components.json # Configuration for components
+├── eslint.config.mjs # ESLint configuration file
+├── middleware.ts # Edge middleware for request handling
+├── next.config.ts # Next.js configuration file
+├── package.json # Project dependencies and scripts
+├── paths.ts # Route definitions for the app
+├── postcss.config.mjs # PostCSS configuration file
+├── README.md # Project documentation and instructions
+├── tailwind.config.ts # Tailwind CSS configuration file
+└── tsconfig.json # TypeScript configuration file
