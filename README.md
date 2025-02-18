@@ -20,7 +20,7 @@
 │   ├── common                  # Commonly used components (Header, Footer, etc.)
 │   ├── page-name               # Components specific to certain pages
 │   ├── shared                  # Reusable shared components
-│   └── ui                      # Atomic UI components like buttons and tags
+│   └── ui                      # Shadcn/ui components like buttons and tags
 ├── constants                   # Global constant values used in the app
 ├── db                          # Database utilities and configurations
 │   ├── data.ts                 # Seed data for the database
